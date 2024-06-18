@@ -34,9 +34,7 @@ function App() {
         const res = await fetch(url);
         const apiData = await res.json();
         localStorage.setItem(localKey, JSON.stringify(apiData));
-
         setData(apiData);
-        console.log(apiData);
         console.log("fetched from api!");
       } catch (err) {
         console.log(err.message);
